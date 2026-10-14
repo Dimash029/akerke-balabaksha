@@ -1,0 +1,15 @@
+/* style.css — Қосымша стильдер */
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Скролл эффектілері */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Карточкаларға қосымша көлеңке эффектісі */
+.group:hover img {
+    transform: scale(1.05);
+}
