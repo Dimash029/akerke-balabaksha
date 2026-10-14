@@ -151,50 +151,154 @@
         </div>
     </section>
 
-    <!-- Жастар топтары -->
-    <section id="groups" class="py-20 bg-amber-50/30">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl sm:text-4xl font-black text-slate-800 mb-4">Жас ерекшелік топтары</h2>
-                <p class="text-slate-600 text-lg font-medium">Әр жастағы баланың ерекшелігіне сай арнайы бағдарламалар</p>
+   <!-- Жас ерекшелік топтары бөлімі -->
+    <section id="groups" class="py-24 bg-gradient-to-b from-amber-50/50 via-white to-pink-50/30 relative overflow-hidden">
+        <!-- Декоративті фон элементтері -->
+        <div class="absolute top-10 left-10 w-72 h-72 bg-pink-200/30 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-amber-200/30 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Бас бөлік -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-pink-100 text-pink-600 font-extrabold text-sm tracking-wide uppercase shadow-sm">
+                    ✨ Біздің топтар
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black text-slate-800 tracking-tight">
+                    Жас ерекшелік <span class="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">топтары</span>
+                </h2>
+                <p class="text-slate-600 text-lg font-medium leading-relaxed">
+                    Әр жастағы баланың физикалық және психологиялық ерекшелігіне сай арнайы дамыту бағдарламалары
+                </p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-3xl shadow-lg overflow-hidden border border-slate-100 hover:shadow-2xl transition-all">
-                    <div class="h-48 bg-pink-100 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=600&q=80" alt="Кіші топ" class="w-full h-full object-cover">
-                        <span class="absolute top-4 right-4 bg-pink-500 text-white text-xs font-bold px-3 py-1.5 rounded-full">1.5 - 3 жас</span>
+            <!-- Карточкалар торы (5 топ) -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- 1. Аққу тобы -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-slate-100 border border-slate-100 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1596464019183-2070e1762c2f?auto=format&fit=crop&w=800&q=80" alt="Аққу тобы" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 right-4 bg-pink-500 text-white font-extrabold text-xs px-3.5 py-1.5 rounded-full shadow-md">
+                            🦢 1 - 2 жас
+                        </span>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-slate-800 mb-2">«Балғын» тобы</h3>
-                        <p class="text-slate-600 text-sm mb-4">Сөйлеу мен ұсақ моториканы дамыту, әлеуметтік бейімделу.</p>
-                        <button onclick="openModal()" class="w-full bg-pink-50 text-pink-600 hover:bg-pink-500 hover:text-white font-bold py-3 rounded-xl transition-colors">Брондау</button>
+                    <div class="p-8 flex flex-col flex-grow justify-between space-y-6">
+                        <div class="space-y-3">
+                            <h3 class="text-2xl font-black text-slate-800 group-hover:text-pink-500 transition-colors">
+                                «Аққу» тобы
+                            </h3>
+                            <p class="text-slate-600 font-medium text-sm leading-relaxed">
+                                Сенсорлық қабылдау, алғашқы қадамдар, балабақша ортасына жұмсақ бейімделу және эмпатия дамыту.
+                            </p>
+                        </div>
+                        <button onclick="openModal()" class="w-full bg-pink-50 hover:bg-pink-500 text-pink-600 hover:text-white font-bold py-3.5 px-4 rounded-2xl transition-all duration-300 text-center shadow-sm">
+                            Орын брондау
+                        </button>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-3xl shadow-lg overflow-hidden border border-slate-100 hover:shadow-2xl transition-all">
-                    <div class="h-48 bg-purple-100 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=600&q=80" alt="Ортаңғы топ" class="w-full h-full object-cover">
-                        <span class="absolute top-4 right-4 bg-purple-500 text-white text-xs font-bold px-3 py-1.5 rounded-full">3 - 4.5 жас</span>
+                <!-- 2. Құлпынай тобы -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-slate-100 border border-slate-100 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1571266028243-3716f02d2d2e?auto=format&fit=crop&w=800&q=80" alt="Құлпынай тобы" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 right-4 bg-rose-500 text-white font-extrabold text-xs px-3.5 py-1.5 rounded-full shadow-md">
+                            🍓 2 жас
+                        </span>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-slate-800 mb-2">«Қарлығаш» тобы</h3>
-                        <p class="text-slate-600 text-sm mb-4">Шығармашылық, логикалық ойлау және тілдік дағдыларды арттыру.</p>
-                        <button onclick="openModal()" class="w-full bg-purple-50 text-purple-600 hover:bg-purple-500 hover:text-white font-bold py-3 rounded-xl transition-colors">Брондау</button>
+                    <div class="p-8 flex flex-col flex-grow justify-between space-y-6">
+                        <div class="space-y-3">
+                            <h3 class="text-2xl font-black text-slate-800 group-hover:text-rose-500 transition-colors">
+                                «Құлпынай» тобы
+                            </h3>
+                            <p class="text-slate-600 font-medium text-sm leading-relaxed">
+                                Белсенді сөйлеу тілін дамыту, ұсақ моторика, қоршаған әлеммен танысу және алғашқы шығармашылық әрекеттер.
+                            </p>
+                        </div>
+                        <button onclick="openModal()" class="w-full bg-rose-50 hover:bg-rose-500 text-rose-600 hover:text-white font-bold py-3.5 px-4 rounded-2xl transition-all duration-300 text-center shadow-sm">
+                            Орын брондау
+                        </button>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-3xl shadow-lg overflow-hidden border border-slate-100 hover:shadow-2xl transition-all">
-                    <div class="h-48 bg-indigo-100 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80" alt="Ересек топ" class="w-full h-full object-cover">
-                        <span class="absolute top-4 right-4 bg-indigo-500 text-white text-xs font-bold px-3 py-1.5 rounded-full">4.5 - 6 жас</span>
+                <!-- 3. Балауса тобы -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-slate-100 border border-slate-100 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Балауса тобы" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 right-4 bg-amber-500 text-white font-extrabold text-xs px-3.5 py-1.5 rounded-full shadow-md">
+                            🌱 3 жас
+                        </span>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-slate-800 mb-2">«Сұңқар» тобы</h3>
-                        <p class="text-slate-600 text-sm mb-4">Мектепке дайындық, жазу, оқу және математика негіздері.</p>
-                        <button onclick="openModal()" class="w-full bg-indigo-50 text-indigo-600 hover:bg-indigo-500 hover:text-white font-bold py-3 rounded-xl transition-colors">Брондау</button>
+                    <div class="p-8 flex flex-col flex-grow justify-between space-y-6">
+                        <div class="space-y-3">
+                            <h3 class="text-2xl font-black text-slate-800 group-hover:text-amber-500 transition-colors">
+                                «Балауса» тобы
+                            </h3>
+                            <p class="text-slate-600 font-medium text-sm leading-relaxed">
+                                Рөлдік ойындар, қатарларымен дұрыс қарым-қатынас жасау, логикалық ойлау негіздері және өзіне-өзі қызмет ету.
+                            </p>
+                        </div>
+                        <button onclick="openModal()" class="w-full bg-amber-50 hover:bg-amber-500 text-amber-600 hover:text-white font-bold py-3.5 px-4 rounded-2xl transition-all duration-300 text-center shadow-sm">
+                            Орын брондау
+                        </button>
                     </div>
                 </div>
+
+                <!-- 4. Келешек тобы -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-slate-100 border border-slate-100 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?auto=format&fit=crop&w=800&q=80" alt="Келешек тобы" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 right-4 bg-purple-500 text-white font-extrabold text-xs px-3.5 py-1.5 rounded-full shadow-md">
+                            🚀 4 жас
+                        </span>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow justify-between space-y-6">
+                        <div class="space-y-3">
+                            <h3 class="text-2xl font-black text-slate-800 group-hover:text-purple-500 transition-colors">
+                                «Келешек» тобы
+                            </h3>
+                            <p class="text-slate-600 font-medium text-sm leading-relaxed">
+                                Сыни тұрғыдан ойлау, шығармашылық шеберхана, логика, қоршаған ортаны кеңірек тану және тілдік қорын байыту.
+                            </p>
+                        </div>
+                        <button onclick="openModal()" class="w-full bg-purple-50 hover:bg-purple-500 text-purple-600 hover:text-white font-bold py-3.5 px-4 rounded-2xl transition-all duration-300 text-center shadow-sm">
+                            Орын брондау
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 5. Бәйтерек МАД тобы -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-slate-100 border border-slate-100 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col group sm:col-span-2 lg:col-span-2">
+                    <div class="relative h-56 sm:h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1000&q=80" alt="Бәйтерек МАД тобы" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/20 to-transparent"></div>
+                        <span class="absolute top-4 right-4 bg-indigo-600 text-white font-extrabold text-xs px-4 py-1.5 rounded-full shadow-md tracking-wider">
+                            🌟 5 жас (МАД)
+                        </span>
+                        <div class="absolute bottom-4 left-6">
+                            <span class="bg-white/20 backdrop-blur-md text-white px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider">
+                                Мектепалды даярлық тобы
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 flex-grow">
+                        <div class="space-y-2 max-w-md">
+                            <h3 class="text-2xl font-black text-slate-800 group-hover:text-indigo-600 transition-colors">
+                                «Бәйтерек» МАД тобы
+                            </h3>
+                            <p class="text-slate-600 font-medium text-sm leading-relaxed">
+                                Мектепке қарқынды дайындық: сауат ашу, жазу, математика негіздері, логикалық ойлау және психологиялық тұрғыдан бейімдеу.
+                            </p>
+                        </div>
+                        <button onclick="openModal()" class="w-full sm:w-auto bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-3.5 px-8 rounded-2xl transition-all duration-300 text-center shadow-lg shadow-indigo-500/25 whitespace-nowrap">
+                            Орын брондау
+                        </button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -240,11 +344,11 @@
             <div>
                 <h4 class="text-xl font-bold mb-4">Байланыс</h4>
                 <p class="text-slate-400 text-sm">📍 Промышленная зона 3,117</p>
-                <p class="text-slate-400 text-sm mt-2">📞 +7 (777) 123-45-67</p>
+                <p class="text-slate-400 text-sm mt-2">📞 +7 (707) 344-46-90</p>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Жұмыс уақыты</h4>
-                <p class="text-slate-400 text-sm">Дүйсенбі - Жұма: 08:00 - 19:00</p>
+                <p class="text-slate-400 text-sm">Дүйсенбі - Жұма: 09:00 - 18:00</p>
                 <p class="text-slate-400 text-sm mt-2">Сенбі, Жексенбі: Демалыс</p>
             </div>
         </div>
