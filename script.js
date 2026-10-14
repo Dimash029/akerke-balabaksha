@@ -41,3 +41,27 @@ function toggleMobileMenu() {
         ? '<path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M6 18L18 6"/>'
         : '<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>';
 }
+function openBalausaModal() {
+    const modal = document.getElementById('balausaModal');
+    const content = document.getElementById('balausaModalContent');
+    
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+    content.classList.remove('scale-95');
+    content.classList.add('scale-100');
+}
+
+function closeBalausaModal() {
+    const modal = document.getElementById('balausaModal');
+    const content = document.getElementById('balausaModalContent');
+    
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    content.classList.remove('scale-100');
+    content.classList.add('scale-95');
+}
+
+// Модалды терезенің сыртқы фонын басқан кезде жабылуы
+document.getElementById('balausaModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeBalausaModal();
+    }
+});

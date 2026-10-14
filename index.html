@@ -188,9 +188,9 @@
                                 Сенсорлық қабылдау, алғашқы қадамдар, балабақша ортасына жұмсақ бейімделу және эмпатия дамыту.
                             </p>
                         </div>
-                        <button onclick="openModal()" class="w-full bg-pink-50 hover:bg-pink-500 text-pink-600 hover:text-white font-bold py-3.5 px-4 rounded-2xl transition-all duration-300 text-center shadow-sm">
-                            Орын брондау
-                        </button>
+                       <button onclick="openBalausaModal()" class="w-full py-3 px-4 bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-bold rounded-2xl shadow-lg shadow-pink-500/25 transition-all duration-300 transform hover:-translate-y-0.5">
+    Тәрбиешімен танысу
+</button>
                     </div>
                 </div>
 
@@ -352,5 +352,49 @@
     </footer>
       <!-- Өзіміздің JS -->
     <script src="script.js"></script>
+<!-- Балауса тобының тәрбиешісі туралы модалды терезе -->
+<div id="balausaModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl transform scale-95 transition-all duration-300 relative overflow-hidden" id="balausaModalContent">
+        <!-- Жоғарғы жақтағы жабу батырмасы -->
+        <button onclick="closeBalausaModal()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center font-bold transition-colors">
+            <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+
+        <!-- Тәрбиеші туралы ақпарат -->
+        <div class="flex items-center gap-4 mb-6">
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-pink-500 to-amber-400 flex items-center justify-center text-white text-3xl shadow-lg shadow-pink-500/30">
+                🌱
+            </div>
+            <div>
+                <span class="text-xs font-bold px-3 py-1 bg-pink-100 text-pink-600 rounded-full uppercase tracking-wider">«Балауса» тобы</span>
+                <h3 class="text-xl sm:text-2xl font-black text-slate-800 mt-1">Үміт Сағынқызы</h3>
+                <p class="text-xs text-slate-400 font-semibold">Тәрбиеші</p>
+            </div>
+        </div>
+
+        <!-- Мәтін бөлімі -->
+        <div class="space-y-3 text-slate-600 text-sm sm:text-base leading-relaxed max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar">
+            <p>
+                <strong>Үміт Сағынқызы</strong> – өз мамандығын сүйетін, балаларға мейіріммен қарап, олардың жан-жақты дамуына үлес қосып жүрген жас маман. Жас болғанына қарамастан, өз ісіне үлкен жауапкершілікпен қарап, әр баланың жүрегіне жол табуға ұмтылады.
+            </p>
+            <p>
+                Балалардың бойына адамгершілік қасиеттерді сіңіріп, білімге деген қызығушылығын арттыруды басты мақсатым деп біледі. Әр күнді балалар үшін қызықты әрі пайдалы өткізуге тырысып, олардың әрбір жетістігіне қуанады.
+            </p>
+            <blockquote class="p-4 bg-pink-50 border-l-4 border-pink-500 rounded-r-2xl text-pink-900 font-medium italic my-4">
+                «Бала жүрегіне жол табу – үлкен мейірім мен шынайы сүйіспеншіліктен басталады»
+            </blockquote>
+            <p>
+                деген ұстаныммен еңбек етіп, үнемі ізденіп, кәсіби тұрғыда дамуға талпынады. Өйткені әрбір баланың бақытты балалық шағы мен жарқын болашағы – тәрбиешінің ең басты құндылығы.
+            </p>
+        </div>
+
+        <!-- Төменгі жабу батырмасы -->
+        <div class="mt-6 pt-4 border-t border-slate-100 flex justify-end">
+            <button onclick="closeBalausaModal()" class="w-full py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-2xl transition-colors">
+                Жабу
+            </button>
+        </div>
+    </div>
+</div>
 </body>
 </html>
