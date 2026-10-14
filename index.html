@@ -45,21 +45,49 @@
 </button>
         </div>
 
-        <!-- Телефонда ашылатын мобильді мәзір -->
-<div id="mobileMenu" class="hidden flex-col absolute top-full left-0 w-full z-40 bg-white/95 backdrop-blur-xl shadow-xl border-b border-slate-100 px-6 py-6 space-y-4 md:hidden">
-    <a href="about.html" onclick="toggleMobileMenu()" class="text-lg font-bold text-slate-700 py-3 border-b border-slate-100 flex items-center justify-between">
-        <span>Біз туралы</span> <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
-    </a>
-    <a href="#advantages" onclick="toggleMobileMenu()" class="text-lg font-bold text-slate-700 py-3 border-b border-slate-100 flex items-center justify-between">
-        <span>Артықшылықтар</span> <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
-    </a>
-    <a href="#groups" onclick="toggleMobileMenu()" class="text-lg font-bold text-slate-700 py-3 border-b border-slate-100 flex items-center justify-between">
-        <span>Топтар</span> <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
-    </a>
-    <a href="#contact" onclick="toggleMobileMenu()" class="text-lg font-bold text-slate-700 py-3 border-b border-slate-100 flex items-center justify-between">
-        <span>Байланыс</span> <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
-    </a>
-</div>
+        <!-- Навигациялық мәзір -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Логотип -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-pink-500 to-amber-400 flex items-center justify-center text-white text-2xl font-black shadow-lg shadow-pink-500/30">
+                    👶
+                </div>
+                <div>
+                    <span class="text-2xl font-black bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">Ақерке</span>
+                    <span class="block text-xs font-semibold text-slate-400 tracking-wider uppercase">Балабақшасы</span>
+                </div>
+            </a>
+
+            <!-- Компьютерге арналған мәзір -->
+            <nav class="hidden md:flex items-center gap-8 font-bold text-slate-600">
+                <a href="about.html" class="hover:text-pink-500 transition-colors">Біз туралы</a>
+                <a href="#advantages" class="hover:text-pink-500 transition-colors">Артықшылықтар</a>
+                <a href="#groups" class="hover:text-pink-500 transition-colors">Топтар</a>
+                <a href="#contact" class="hover:text-pink-500 transition-colors">Байланыс</a>
+            </nav>
+
+            <!-- Телефонға арналған Бургер батырмасы -->
+            <button onclick="toggleMobileMenu()" class="text-slate-800 text-3xl p-2 focus:outline-none z-50">
+                <i id="menuIcon" class="fa-solid fa-bars transition-transform duration-300"></i>
+            </button>
+        </div>
+
+        <!-- Телефонда батырманы басқанда ашылатын мобильді мәзір -->
+        <div id="mobileMenu" class="absolute top-20 left-0 w-full z-40 bg-white/95 backdrop-blur-xl shadow-xl border-b border-slate-100 flex flex-col px-6 py-6 space-y-4 md:hidden transition-all duration-300 -translate-y-full opacity-0 pointer-events-none">
+            <a href="about.html" onclick="toggleMobileMenu()" class="text-lg font-bold text-slate-700 py-3 border-b border-slate-100 flex items-center justify-between">
+                <span>Біз туралы</span> <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
+            </a>
+            <a href="#advantages" onclick="toggleMobileMenu()" class="text-lg font-bold text-slate-700 py-3 border-b border-slate-100 flex items-center justify-between">
+                <span>Артықшылықтар</span> <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
+            </a>
+            <a href="#groups" onclick="toggleMobileMenu()" class="text-lg font-bold text-slate-700 py-3 border-b border-slate-100 flex items-center justify-between">
+                <span>Топтар</span> <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
+            </a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="text-lg font-bold text-slate-700 py-3 border-b border-slate-100 flex items-center justify-between">
+                <span>Байланыс</span> <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
+            </a>
+        </div>
     </header>
     <!-- Hero Бөлімі -->
     <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">

@@ -29,6 +29,15 @@ function handleFormSubmit(event) {
 }
 function toggleMobileMenu() {
     const menu = document.getElementById('mobileMenu');
-    menu.classList.toggle('hidden');
-    menu.classList.toggle('flex');
+    const icon = document.getElementById('menuIcon');
+
+    menu.classList.toggle('-translate-y-full');
+    menu.classList.toggle('opacity-0');
+    menu.classList.toggle('pointer-events-none');
+
+    // Бургер ↔ крестик (SVG)
+    const isOpen = !menu.classList.contains('opacity-0');
+    icon.innerHTML = isOpen
+        ? '<path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M6 18L18 6"/>'
+        : '<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>';
 }
