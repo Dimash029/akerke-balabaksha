@@ -37,16 +37,14 @@
                 <a href="#contact" class="hover:text-pink-500 transition-colors">Байланыс</a>
             </nav>
 
-            <!-- Телефонға арналған Бургер батырмасы (Мінсіз көрінетін жері) -->
-           <button onclick="toggleMobileMenu()" class="relative z-50 md:hidden text-slate-800 p-2 focus:outline-none" aria-label="Мәзір">
-    <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-    </svg>
-</button>
+            <!-- Телефонға арналған Бургер батырмасы -->
+            <button onclick="toggleMobileMenu()" class="md:hidden text-slate-800 text-3xl p-2 focus:outline-none z-50">
+                <i id="menuIcon" class="fa-solid fa-bars transition-transform duration-300"></i>
+            </button>
         </div>
 
         <!-- Телефонда батырманы басқанда ашылатын мобильді мәзір -->
-        <div id="mobileMenu" class="absolute top-20 left-0 w-full z-40 bg-white/95 backdrop-blur-xl shadow-xl border-b border-slate-100 flex flex-col px-6 py-6 space-y-4 md:hidden transition-all duration-300 -translate-y-full opacity-0 pointer-events-none">
+        <div id="mobileMenu" class="absolute top-20 left-0 w-full bg-white/95 backdrop-blur-xl shadow-xl border-b border-slate-100 flex flex-col px-6 py-6 space-y-4 md:hidden transform -translate-y-full opacity-0 pointer-events-none transition-all duration-300 ease-in-out">
             <a href="about.html" onclick="toggleMobileMenu()" class="text-lg font-bold text-slate-700 py-3 border-b border-slate-100 flex items-center justify-between">
                 <span>Біз туралы</span> <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
             </a>
