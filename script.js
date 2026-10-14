@@ -26,13 +26,9 @@ function handleFormSubmit(event) {
     event.preventDefault();
     alert('Өтінішіңіз сәтті қабылданды! Жақында менеджеріміз сізге хабарласады.');
     closeModal();
-}function toggleMobileMenu() {
+}
+function toggleMobileMenu() {
     const menu = document.getElementById('mobileMenu');
-    const icon = document.getElementById('menuIcon');
-
     menu.classList.toggle('hidden');
     menu.classList.toggle('flex');
-
-    icon.classList.toggle('fa-bars');
-    icon.classList.toggle('fa-xmark');
 }
