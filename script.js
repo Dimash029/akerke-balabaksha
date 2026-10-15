@@ -64,4 +64,51 @@ document.getElementById('balausaModal').addEventListener('click', function(e) {
     if (e.target === this) {
         closeBalausaModal();
     }
-});
+    // WhatsApp-қа хабарлама жіберу функциясы
+function sendToWhatsApp(event) {
+    event.preventDefault(); // Беттің қайта жүктелуін тоқтатады
+
+    // Толтырылған өрістерден мәліметтерді алу
+    const name = document.getElementById('parentName').value.trim();
+    const phone = document.getElementById('parentPhone').value.trim();
+    const age = document.getElementById('childAge').value;
+
+    // ⚠️ БҰЛ ЖЕРГЕ ӨЗІҢНІҢ НАҚТЫ WHATSAPP НӨМІРІҢДІ ЖАЗ (8-сіз, ел коды 7-мен басталсын)
+    const myWhatsAppNumber = "77000000000"; 
+
+    // WhatsApp-қа түсетін хабарламаның форматы
+    const message = `👶 *Жаңа өтінім! («Ақерке» балабақшасы)*\n\n` +
+                    `👤 *Ата-ана:* ${name}\n` +
+                    `📞 *Телефон:* ${phone}\n` +
+                    `🎂 *Баланың жасы:* ${age}`;
+
+    // Сілтеме жасау
+    const whatsappUrl = `https://wa.me/${myWhatsAppNumber}?text=${encodeURIComponent(message)}`;
+
+    // Модалды терезені жабу
+    closeApplicationModal();
+
+    // WhatsApp-ты жаңа терезеде ашу
+    window.open(whatsappUrl, '_blank');
+}
+
+// Модалды терезені ашу функциясы (батырмаларға onclick="openApplicationModal()" деп қосасың)
+function openApplicationModal() {
+    const modal = document.getElementById('applicationModal');
+    const content = document.getElementById('applicationModalContent');
+    if (modal && content) {
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        content.classList.remove('scale-95');
+        content.classList.add('scale-100');
+    }
+}
+
+// Модалды терезені жабу функциясы
+function closeApplicationModal() {
+    const modal = document.getElementById('applicationModal');
+    const content = document.getElementById('applicationModalContent');
+    if (modal && content) {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        content.classList.remove('scale-100');
+        content.classList.add('scale-95');
+    }
