@@ -74,13 +74,13 @@ function sendToWhatsApp(event) {
     const age = document.getElementById('childAge').value;
 
     // ⚠️ БҰЛ ЖЕРГЕ ӨЗІҢНІҢ НАҚТЫ WHATSAPP НӨМІРІҢДІ ЖАЗ (8-сіз, ел коды 7-мен басталсын)
-    const myWhatsAppNumber = "77000000000"; 
+    const myWhatsAppNumber = "77012013474"; 
 
     // WhatsApp-қа түсетін хабарламаның форматы
     const message = `👶 *Жаңа өтінім! («Ақерке» балабақшасы)*\n\n` +
                     `👤 *Ата-ана:* ${name}\n` +
                     `📞 *Телефон:* ${phone}\n` +
-                    `🎂 *Баланың жасы:* ${age}`;
+                    `🎂 *Бааланың жасы:* ${age}`;
 
     // Сілтеме жасау
     const whatsappUrl = `https://wa.me/${myWhatsAppNumber}?text=${encodeURIComponent(message)}`;
